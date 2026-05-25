@@ -1,0 +1,34 @@
+public class week06labtask02{
+  public static void main(String args[]){
+    System.out.println("Enter both the strings: ");
+    String st1="Flower";
+    String st2="Flow";
+    if(st1.length()>st2.length()){
+      for(int i=0;i<st2.length();i++){
+        for(int j =0;j<st2.length();j++){
+          if(st1.charAt(i)==st2.charAt(j)){
+          System.out.println("the longest prefix is:"+ st2.charAt(j));
+          }
+          else{
+            
+           System.out.println("There is no common prefix");
+          }
+        }
+      }
+    System.out.println(st2.charAt(j));
+    }
+    else{or(int i=0;i<st1.length();i++){
+        for(int j =0;j<st1.length();j++){
+          if(st1.charAt(i)==st2.charAt(j)){
+          System.out.println("the longest prefix is:"+ st1.charAt(i));
+          }
+          else{
+            
+           System.out.println("There is no common prefix");
+          }
+        }
+      }
+    System.out.println(st1.charAt(1));
+    }    
+    }
+  }
