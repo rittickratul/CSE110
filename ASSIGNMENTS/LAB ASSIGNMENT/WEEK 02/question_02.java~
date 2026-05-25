@@ -1,0 +1,30 @@
+//Question_02
+ import java.util.Scanner;
+ public class question_02{
+ public static void main (String [] args){
+ Scanner sc = new Scanner (System.in);
+ System.out.println("Enter your age ");
+ int age=sc.nextInt();
+ System.out.println("Enter time you charged the vehicle");
+ int hour =sc.nextInt();
+ double bill =15*hour; 
+ if (age < 18){
+ System.out.println( "Your bill is "+" "+ (bill =bill - (bill*20)/100)+" " +" Tk");
+ if (hour >100){
+ System.out.println( "Your bill is "+" "+ (bill =bill*5/100)+" " +" Tk");
+ }
+ }
+ else if (age >60){
+   bill =bill -bill*10/100;
+     bill =bill + bill*5/100;
+ System.out.println("Your bill is "+ bill +" TK");
+ }
+ else {
+   System.out.println("Your bill is "+" "+bill+" " +"Tk" );
+   if (hour >100){
+ System.out.println( "Your bill is "+" "+ (bill =bill*5/100)+" " +" Tk");
+ }
+ }
+ }
+ }
+ 

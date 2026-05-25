@@ -1,0 +1,33 @@
+//Question_05
+import java.util.Scanner;
+ public class question_05{
+ public static void main (String [] args){
+ Scanner sc = new Scanner (System.in);
+//Enter the amount the customer need to pay(Taka)
+ System.out.println("Enter the amount the customer need to pay(Taka) ");
+ int pay = sc.nextInt();
+// Enter the amount the customer need to pay(Taka) 
+  System.out.println("Enter the amount the customer paid(Taka) ");
+  int paid = sc.nextInt();
+  int give_back =  paid-pay;
+//  if (give_back == 0){
+//  System.out.println("Do not need to give back any tk back");
+//  }
+//  else{
+//  System.out.println("You need to give back  " + "" +give_back + " TK");
+//  }
+if (give_back >= 100){
+  System.out.println("100 Tk note : "+ (give_back/100));
+ }
+   else if (give_back < 100 && give_back>=50){
+  System.out.println("50 Tk note : "+ (give_back%100/50));
+  } 
+  else if (give_back < 50 && give_back>=20){
+  System.out.println("20 Tk note : "+ (give_back%100%50/20));
+  }  
+ }
+ }
+ 
+
+ 
+ 
