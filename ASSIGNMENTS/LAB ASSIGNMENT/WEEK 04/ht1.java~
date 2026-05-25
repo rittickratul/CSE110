@@ -1,0 +1,35 @@
+//completed
+//Assignment 4 ht1
+import java.util.Scanner;
+public class  ht1{
+public static void main (String args []){
+Scanner sc = new Scanner (System.in);
+System.out.println("Enter starting point: ");
+int start = sc.nextInt();
+System.out.println("Enter ending point: ");
+int end =sc.nextInt();
+for (int i = start; i <= end; i++) {
+int temp = i;
+int digits = 0;            
+int counter = i;
+while (counter > 0) {
+counter /= 10;
+digits++;
+}
+int sum = 0;
+int temp2 = i;
+while (temp2 > 0) {
+int digit = temp2 % 10;
+int pow = 1;
+for (int j = 1; j <= digits; j++) {
+pow *= digit;
+}
+sum += pow;
+temp2 /= 10;
+}
+if (sum == i) {
+System.out.println(i);
+}
+}
+}
+}

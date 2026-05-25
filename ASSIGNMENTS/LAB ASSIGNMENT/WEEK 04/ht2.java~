@@ -1,0 +1,22 @@
+//Assignment 4 ht2
+import java.util.Scanner;
+public class  ht2{
+public static void main (String args []){
+Scanner sc = new Scanner (System.in);
+System.out.println("Enter number of students to check:");
+int StudentNumber= sc.nextInt();
+for(int i=1;i<=StudentNumber;i++){
+System.out.println("Enter student ID of student no: " +i);
+int StudentID=sc.nextInt();
+while(StudentID!=1){
+if (StudentID%2==0){
+System.out.println("Lucky ID");
+}
+else{
+System.out.println("Not Lucky");
+}
+StudentID=StudentID/2;
+}
+}
+}
+}
