@@ -1,0 +1,22 @@
+//Lab Assignment 1 
+public class LabTask_06{
+public static void main (String args []){
+//By creating a third variable 
+int a = 10;
+int b= 5;
+int temp = 0;
+temp = a;
+a=b;
+System.out.println(a);
+b = temp;
+System.out.println(b);
+//without creating a third variable
+a= a+b;
+b=a-b;
+System.out.println(b);
+a = a-b;
+System.out.println(a);
+}
+}
+
+  
