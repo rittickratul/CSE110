@@ -1,0 +1,14 @@
+//Assignment 2 
+import java.util.Scanner;
+public class labtask_02{
+public static void main (String [] args) {
+Scanner sc = new Scanner (System.in);
+int n = sc.nextInt();
+if (n>=90 && n<=100){
+system.out.println("Grade : A");
+}
+else if(n<=89 && n>=85){
+system.out.println("Grade : B");
+}
+}
+}
