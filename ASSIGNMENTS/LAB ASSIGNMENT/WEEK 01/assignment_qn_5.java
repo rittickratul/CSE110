@@ -1,0 +1,27 @@
+//Assignment_qn_5
+  public class assignment_qn_5{
+  public static void main(String [] args){
+//Enter the opposite of the right angle triangle according to angle A   
+  double length_of_a = 4.5;
+//Enter the base of the right angle triangle according to angle A  
+  double length_of_b = 9.5;
+//Find the hypotenuse of the the triangle using Pythagora's theorem   
+  double The_value_of_hypotenuse_c = Math.sqrt((length_of_a*length_of_a) +(length_of_b*length_of_b));
+//Caclculate Sin(A)  
+  double The_value_of_Sin_A = length_of_a/The_value_of_hypotenuse_c;
+//Print output  
+  System.out.println(" The value of Sin(A) = " +The_value_of_Sin_A );
+//Calculate Cos(A)  
+  double The_value_of_Cos_A = length_of_b/The_value_of_hypotenuse_c;
+//Print output  
+  System.out.println(" The value of Cos(A) = " +The_value_of_Cos_A );
+//Caclculate Sin(B)  
+  double The_value_of_Sin_B = length_of_b/The_value_of_hypotenuse_c;
+//Print output   
+  System.out.println(" The value of Sin(B) = " +The_value_of_Sin_B );
+//Calculate Cos(B)  
+  double The_value_of_Cos_B = length_of_a/The_value_of_hypotenuse_c;
+//Print output  
+  System.out.println(" The value of Cos(B) = " +The_value_of_Cos_B );
+  }
+ } 

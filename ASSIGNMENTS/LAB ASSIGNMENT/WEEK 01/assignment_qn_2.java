@@ -1,0 +1,13 @@
+//Assignment_qn_2
+  public class assignment_qn_2{
+  public static void main(String [] args){
+//Enter the value of a,b,c    
+  int a = 2;
+  int b = 5;
+  int c = 8;
+//Calculate the value of d 
+  int d = (2*b*(c-a)/3)+7;
+//Print output  
+  System.out.println("The value of d is " + ""+ d);
+  }
+ }

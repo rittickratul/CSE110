@@ -1,0 +1,13 @@
+//Assignment_qn_1
+  public class assignment_qn_1{
+  public static void main (String [] args){
+//Enter the minute given by NASA
+    int time = 3456789;
+//Convert minute into year
+    int year = time/525600;               // 1 year = 525600 minutes
+//Convert the remaining minute into day
+    int day = (time%525600)/(1440);      //  1 day = 1440 minutes
+//Print output    
+    System.out.println("The total time is " +" "+year +" years and " +day +" days");
+  }
+ }
