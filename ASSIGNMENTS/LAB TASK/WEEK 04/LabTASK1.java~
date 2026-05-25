@@ -1,0 +1,20 @@
+//Assignment 4 
+//Lab task 1 
+import java.util.Scanner;
+public class LabTASK1{
+public static void main(String args []){
+Scanner sc = new Scanner (System.in);
+System.out,println("Enter  the number of warriors (W):  ");
+int w= sc.nextInt();
+int win = 0;
+for (int i=1; i<=w;i++){
+  for (int j =1; j<=w;j++){
+    if (i!=j && i%j==0){
+    System.out.println( i+ " beats"+ j);
+    win ++;
+    }
+  }
+}
+Syatem.out.println("Total win" + win);
+} 
+}
