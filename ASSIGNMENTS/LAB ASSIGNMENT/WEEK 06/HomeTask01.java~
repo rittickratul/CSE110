@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class HomeTask01{
+  public static void main(String[] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.print("Message: ");
+    String s1= sc.nextLine();
+    String s2= "";
+    String s3="00";
+    boolean a= false;
+    for (int i=1; i<s1.length(); i++){
+      if((s1.charAt(i-1)>='0'&&s1.charAt(i-1)<='9')&&(s1.charAt(i)>='0'&&s1.charAt(i)<='9')){
+        s2=s2+s1.charAt(i-1)+s1.charAt(i);
+          if(s2.length()==2 && s2.charAt(0)>=s3.charAt(0) && s2.charAt(1)>=s3.charAt(1)){
+            a= true;
+            s3=s2;
+          }
+      }
+      else{
+      s2="";
+      }
+    }
+    if(a==true){
+      System.out.println("2-Digit PIN: "+s3);
+    }
+    else {
+      System.out.println("2-Digit PIN: 0");
+    }
+  }
+}
+

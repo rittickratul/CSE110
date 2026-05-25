@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class HomeTask03{
+  public static void main(String[] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Names of the spells: ");
+    String s2="";
+    String s3="";
+    int level=0;
+    while (true){
+      String s1= sc.nextLine();
+      if (s1.equals("stop")){
+        break;
+      }
+      for(int i=0; i<s1.length(); i++){
+        char c = s1.charAt(i);
+        if (c>='a' && c<='z'){
+          c-=32;
+        }
+          if(c>='A' && c<= 'Z'){
+            s2+=c;
+          }
+      }
+      if(s2.length()>s3.length()){
+      s3=s2;
+      } 
+      s2="";
+    }
+    for(int i=0; i<s3.length(); i++){
+      int a = (int) s3.charAt(i);
+      level +=a;
+    }
+    System.out.println("Largest Spell : "+s3);
+    System.out.println("Power Level : "+level);
+  }
+}
