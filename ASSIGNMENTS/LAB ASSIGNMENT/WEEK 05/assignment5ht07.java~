@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class assignment5ht07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Get input from user (works best with odd numbers like 5, 7)
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        // --- UPPER HALF (Inverted Pyramid) ---
+        // 'len' represents the count of numbers in the current row.
+        // It starts at N and decreases by 2 (e.g., 7 -> 5 -> 3 -> 1)
+        for (int len = n; len >= 1; len -= 2) {
+            
+            // 1. Print Leading Spaces
+            // Formula: (Total Width - Current Width) / 2
+            int spaces = (n - len) / 2;
+            for (int s = 0; s < spaces; s++) {
+                System.out.print(" ");
+            }
+
+            // 2. Print Numbers (1 to len)
+            for (int j = 1; j <= len; j++) {
+                System.out.print(j);
+            }
+
+            // Move to next line
+            System.out.println();
+        }
+
+        // --- LOWER HALF (Regular Pyramid) ---
+        // 'len' starts at 3 because row 1 is already printed.
+        // It increases by 2 until it reaches N.
+        for (int len = 3; len <= n; len += 2) {
+            
+            // 1. Print Leading Spaces
+            int spaces = (n - len) / 2;
+            for (int s = 0; s < spaces; s++) {
+                System.out.print(" ");
+            }
+
+            // 2. Print Numbers (1 to len)
+            for (int j = 1; j <= len; j++) {
+                System.out.print(j);
+            }
+
+            // Move to next line
+            System.out.println();
+        }
+        
+        sc.close();
+    }
+}

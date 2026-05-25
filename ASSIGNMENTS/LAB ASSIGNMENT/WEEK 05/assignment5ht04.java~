@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class assignment5ht04{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Get input from user
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        // --- UPPER HALF (from row 1 to n) ---
+        for (int i = 1; i <= n; i++) {
+            // 1. Print Leading Spaces
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+
+            // 2. Print the first number (Always 1)
+            System.out.print("1");
+
+            // 3. Handle the hollow part and the second number
+            if (i > 1) {
+                // Print inner spaces
+                // Formula derived: Row 2 has 1 space, Row 3 has 3 spaces, Row 4 has 5...
+                // Logic: (2 * i) - 3
+                for (int s = 1; s <= (2 * i) - 3; s++) {
+                    System.out.print(" ");
+                }
+                
+                // Print the second number (Odd numbers: 3, 5, 7...)
+                System.out.print((2 * i) - 1);
+            }
+
+            // Move to next line
+            System.out.println();
+        }
+
+        // --- LOWER HALF (from row n-1 down to 1) ---
+        for (int i = n - 1; i >= 1; i--) {
+            // 1. Print Leading Spaces
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+
+            // 2. Print the first number (Always 1)
+            System.out.print("1");
+
+            // 3. Handle the hollow part and the second number
+            if (i > 1) {
+                // Print inner spaces
+                for (int s = 1; s <= (2 * i) - 3; s++) {
+                    System.out.print(" ");
+                }
+
+                // Print the second number
+                System.out.print((2 * i) - 1);
+            }
+
+            // Move to next line
+            System.out.println();
+        }
+        
+        sc.close();
+    }
+}

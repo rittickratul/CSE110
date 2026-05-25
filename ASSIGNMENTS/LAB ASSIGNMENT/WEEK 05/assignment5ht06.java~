@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class assignment5ht06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Get input from user
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        // Outer loop: Starts at N and decreases to 1
+        // 'i' represents the peak number for the current row
+        for (int i = n; i >= 1; i--) {
+
+            // 1. Print Leading Spaces
+            // As 'i' gets smaller, (n - i) gets larger, creating the indentation
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+
+            // 2. Print Ascending Numbers (1 to i)
+            // Example: If i=4, prints "1234"
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            // 3. Print Descending Numbers (i-1 down to 1)
+            // Example: If i=4, prints "321"
+            for (int k = i - 1; k >= 1; k--) {
+                System.out.print(k);
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+        
+        sc.close();
+    }
+}

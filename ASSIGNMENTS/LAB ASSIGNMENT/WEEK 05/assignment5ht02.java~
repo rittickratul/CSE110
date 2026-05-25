@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class assignment5ht02{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1. Get Input
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        // 2. Loop through each row (i represents the current row number)
+        for (int i = 1; i <= n; i++) {
+
+            // Step A: Print leading spaces (Right Justification)
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+
+            // Step B: Print the numbers/pattern
+            if (i == n) {
+                // --- Logic for the Last Row ---
+                // Print sequence 1 to n (e.g., 12345)
+                for (int j = 1; j <= n; j++) {
+                    System.out.print(j);
+                }
+            } 
+            else if (i == 1) {
+                // --- Logic for the First Row ---
+                // Just print the input number
+                System.out.print(n);
+            } 
+            else {
+                // --- Logic for Middle Rows (Hollow part) ---
+                
+                // 1. Print the left boundary number
+                System.out.print(n - i + 1);
+
+                // 2. Print inner spaces
+                // The amount of space inside increases by 1 for every row down
+                for (int s = 1; s <= i - 2; s++) {
+                    System.out.print(" ");
+                }
+
+                // 3. Print the right boundary number (always n)
+                System.out.print(n);
+            }
+
+            // Step C: Move to the next line
+            System.out.println();
+        }
+        
+        sc.close();
+    }
+}
