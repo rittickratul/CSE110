@@ -1,0 +1,22 @@
+//Assignment 3
+import java.util.Scanner;
+public class Labtask_1{
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);  
+int temp =1;
+for (int i =24; i>=-6; i-=6){
+if (i==-6){
+System.out.print(i);
+}
+else {
+System.out.print(i + ",");
+}
+}
+//for (int j=28; j>=-63; j+=9){
+//j*=temp;
+//temp*=-1;
+//System.out.println(j);
+//}
+}
+}
+
